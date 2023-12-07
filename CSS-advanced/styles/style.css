@@ -1,0 +1,190 @@
+:root {
+    /*-- nombre-variable*/
+--font-primary: 'Ubuntu', sans-serif; 
+--color-primary: #5C1D3E;
+--color-secondary: #F2E394;
+--color-text-primary: #3A9994;
+--color-text-secondary: #D1CB1F;
+--color-background: #F2E394;
+--color-light: #f2f2f2;
+--color-dark: #070C26;
+}
+
+h2,h3{
+    font-family: var(--font-primary);
+}
+body{
+    background-color: #F2E394;
+}
+.position {
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-primary);
+}
+/*La posición estatica es la posición por default del html, no se afecta por magin de ningún*/
+#static {
+    position: static;
+    top: 20px ;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: var(--color-text-primary); 
+}
+/*es posicionado de forma relativa al viewport y si permite movimiento mediante propiedades top, bottom, left, right*/
+#relative {
+    position: relative;
+    top: 1000px;
+    left: 100px;
+    background-color: var(--color-text-secondary);
+}
+/* se posiciona de forma relativa a su ancestro más cercano y no con respecto al viewport*/
+#absolute {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    background-color: var(--color-light);
+}
+/*este será el ancestro sobre el cual se moverá el hijo "ancestro"*/
+#ancestro {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 500px;
+    background-color: var(--color-text-secondary);
+    border: solid var(--color-light) 1px;
+}
+/* nor permite mantener el elemento de manera fija en el viewport*/
+#fixed {
+    position: fixed;
+    left: 600px;
+    top: 500px;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+#chat {
+    position: fixed;
+    top: 520px;
+    left: 400px;
+    width: 60px;
+    height: 60px;
+}
+#whatsapp-icon {
+    width: 100%;
+}
+.display-inLine {
+    width: 100px;
+    height: 100px;
+    background-color: #5C1D3E;
+    color: var(--color-light);
+    text-align: center;
+    margin: 2px;
+}
+#display-2, #display-4 {
+    display: inline;
+    width: 100px;
+    height: 100px;
+    background-color: #5C1D3E;
+    color: var(--color-light);
+    text-align: center;
+    margin: 2px;
+}
+.display-block {
+    /* Display: block;*/
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: #d41e7c;
+    color: var(--color-light);
+    text-align: center;
+    margin: 4px;
+}
+.display-none{
+    display: none;
+}
+/* Display flex me permite trabajar de manera flexible con elementos anidados dentro de un ancestro. El flexbox se aplica en el container y tiene efecto en los hijos.
+Por default, la dirección de flex es en filas (row).
+Vamos a poder acceder a diversas propiedades para modificar el comportamiento de los elementos.
+    > - flex-direction: column, column-reverse, row, row-reverse
+    <
+    > - flex-wrap: wrap, nowrap, wrap-reverse.
+    > - justify-content: center, flex-start, flex-end, space between, space-around
+    > - align-item: start, end, center
+    > - align-self: flex-start, flex-end, etc.. (un único elemento)
+*/
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    background-color: var(--color-text-primary);
+    height: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 15px;
+}
+.display-flex {
+    width: 100px;
+    height: 80px;
+    margin: 5px;
+    padding: 2px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--color-secondary);
+}
+#item-8 {
+    align-self: flex-end;
+}
+/*Grid layout
+Elementos de una cuadricula grid: contenedor, items, celdas, área.
+display: grid;
+*/
+.grid {
+    display: grid;
+    grid-template-columns: auto;
+    /*grid-template-rows: auto;*/
+    gap: 11px
+}
+.display-grid {
+    background-color: var(--color-primary);
+    color: #f2f2f2;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    border: solid var(--color-light);
+}
+.container-1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+
+width: auto;
+height: 500px;
+border: solid var(--color-dark) 0.7px;
+text-align: center;
+margin: 10px;
+}
+
+
+
+
+header {
+    background-color: brown;
+}
+nav {
+    background-color: #d41e7c;
+}
+aside  {
+    background-color: aqua;
+}
+article {
+    background-color: green;
+}
+section {
+    background-color: purple;
+}
+footer {
+    background-color: goldenrod;
+    /*agregar grids áreas*/
+}
